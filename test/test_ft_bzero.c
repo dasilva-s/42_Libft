@@ -31,15 +31,33 @@ void	*ft_bzero(void *s, size_t n)
 	return (s);
 }
 
+void	*ft_memcpy(void *dest, const void *src, size_t s)
+{
+	unsigned char	*desti;
+	unsigned char	*sourc;
+
+	desti = (unsigned char *) dest;
+	sourc = (unsigned char *) src;
+	while (s--)
+	{
+		desti = sourc;
+		desti++;
+		sourc++;
+	}
+	return (dest);
+}
+
 int main (void)
 {
-	char text[10] = "hello";
-	char text2[10] = "hello";
+	char text10[20] = "hello";
+	char text11[20] = "word";
+	char text20[20] = "hello";
+	char text21[20] = "word";
 
-	bzero(text + 2, 8);
-	ft_bzero(text2 + 2, 8);
-	printf("memset = %s\n", text);
-	printf("ft_memset = %s\n", text2);
+	memcpy(text10, text11, 3);
+	ft_memcpy(text20, text21, 3);
+	printf("memset = %s\n", text10);
+	printf("ft_memset = %s\n", text20);
 
 	return(0);
 }

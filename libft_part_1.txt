@@ -3,10 +3,10 @@
  isalnum 
  isascii 
  isprint 
-6 strlen 
-• memset 
-• bzero
-• memcpy 
+ strlen 
+ memset 
+ bzero
+ memcpy 
 • memmove 
 • strlcpy 
 • strlcat

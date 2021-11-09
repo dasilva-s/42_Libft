@@ -39,8 +39,8 @@ int main (void)
 	char text[10] = "hello";
 	char text2[10] = "hello";
 
-	memset(text + 1, '0', 3 * sizeof(char));
-	ft_memset(text2 + 1, '0', 3 * sizeof(char));
+	memset(&text[1], '0', 3 * sizeof(char));
+	ft_memset(&text2[1], '0', 3 * sizeof(char));
 	printf("memset = %s\n", text);
 	printf("ft_memset = %s\n", text2);
 
