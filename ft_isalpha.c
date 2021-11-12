@@ -6,9 +6,11 @@
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:22:37 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/03 10:29:56 by stde-alm         ###   ########.fr       */
+/*   Updated: 2021/11/12 13:10:42 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include"libft.h"
 
 int	ft_isalpha(int car)
 {

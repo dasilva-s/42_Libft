@@ -6,9 +6,11 @@
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 10:18:46 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/03 10:30:39 by stde-alm         ###   ########.fr       */
+/*   Updated: 2021/11/12 13:10:53 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include"libft.h"
 
 int	ft_isdigit(int car)
 {

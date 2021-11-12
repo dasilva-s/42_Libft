@@ -6,7 +6,7 @@
 #    By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/12 12:00:59 by stde-alm          #+#    #+#              #
-#    Updated: 2021/11/12 12:14:13 by stde-alm         ###   ########.fr        #
+#    Updated: 2021/11/12 13:09:02 by stde-alm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRCS	=
 
 OBJS	= ${SRCS:.c=.o}
 
-NAME	= hello
+NAME	= libft.a
 
 CC		= gcc
 

@@ -6,9 +6,11 @@
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:52:58 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/03 12:14:15 by stde-alm         ###   ########.fr       */
+/*   Updated: 2021/11/12 13:11:00 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include"libft.h"
 
 int	ft_isprint(int car)
 {
