@@ -10,13 +10,13 @@
  memmove 
  strlcpy 
  strlcat
-• toupper 
-• tolower 
-• strchr 
-• strrchr 
-• strncmp 
-• memchr 
-• memcmp 
+ toupper 
+ tolower 
+ strchr 
+ strrchr 
+ strncmp 
+ memchr 
+ memcmp 
 • strnstr 
 • atoi
 

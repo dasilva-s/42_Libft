@@ -1,31 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 00:04:20 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/15 15:21:19 by stde-alm         ###   ########.fr       */
+/*   Created: 2021/11/15 16:47:52 by stde-alm          #+#    #+#             */
+/*   Updated: 2021/11/15 17:54:17 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include"stdlib.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t s)
+char	*ft_strnstr( const char *s1, const char *s2, size_t l)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
+	int	j;
+	int t;
 
 	i = 0;
-	j = ft_strlen (dst);
-	if (j >= s)
-		return (ft_strlen(src) + s);
-	while (src[i] && j + i < s - 1)
+	j = 0;
+	t = 0;
+	while (s1[i] && l--)
 	{
-		dst[j + i] = src[i];
+		if (s1[i] == s2[j])
+		{
+			t = 1;
+			while (s2[j] && t == 1)
+			{
+				j++;
+				if (s1[i + j] != s2[j])
+				{
+					t = 0;
+					j = 0;
+				}
+			}
+			if (t == 1)
+				return (&((char *)s1)[i]);
+		}
 		i++;
 	}
-	dst[j + i] = '\0';
-	return (ft_strlen(dst) + ft_strlen(&src[i]));
+	return (NULL);
 }

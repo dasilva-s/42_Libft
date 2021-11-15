@@ -6,7 +6,7 @@
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 03:39:20 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/14 03:39:20 by stde-alm         ###   ########.fr       */
+/*   Updated: 2021/11/15 10:23:37 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,5 @@ char c[9] = "dimanche";
 
 printf("%ld \n", strlcpy(a,b,4));
 printf("%ld \n", strlcpy(c,a,5));
-printf("%ld \n", strlcpy(c,b,12));
 
 }

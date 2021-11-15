@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 00:04:20 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/15 15:21:19 by stde-alm         ###   ########.fr       */
+/*   Created: 2021/11/15 11:39:35 by stde-alm          #+#    #+#             */
+/*   Updated: 2021/11/15 15:22:10 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t s)
+char	*ft_strrchr(const char *str, int car)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
 
-	i = 0;
-	j = ft_strlen (dst);
-	if (j >= s)
-		return (ft_strlen(src) + s);
-	while (src[i] && j + i < s - 1)
+	i = ft_strlen (str);
+	while (i >= 0)
 	{
-		dst[j + i] = src[i];
-		i++;
+		if (str[i] == car)
+			return (&((char *) str)[i]);
+		i--;
 	}
-	dst[j + i] = '\0';
-	return (ft_strlen(dst) + ft_strlen(&src[i]));
+	return (NULL);
 }

@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 00:04:20 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/15 15:21:19 by stde-alm         ###   ########.fr       */
+/*   Created: 2021/09/15 19:01:58 by stde-alm          #+#    #+#             */
+/*   Updated: 2021/11/15 14:00:23 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t s)
+int	ft_strncmp(char *s1, char *s2, size_t n)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
 
 	i = 0;
-	j = ft_strlen (dst);
-	if (j >= s)
-		return (ft_strlen(src) + s);
-	while (src[i] && j + i < s - 1)
+	while ((s1[i] || s2[i]) && n > 0)
 	{
-		dst[j + i] = src[i];
+		if (s1[i] != s2[i])
+			return (((unsigned char) s1[i] - s2[i]));
 		i++;
+		n--;
 	}
-	dst[j + i] = '\0';
-	return (ft_strlen(dst) + ft_strlen(&src[i]));
+	return (0);
 }
+/*
+int	main(void)
+{
+	char	text1[] = "salut";
+	char	text2[] = "salut";
+	int	c = 0;
+
+	printf(" %d \n", strncmp(text1, text2, c));
+	printf(" %d \n", ft_strncmp(text1, text2, c));
+}*/

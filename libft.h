@@ -6,7 +6,7 @@
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:20:55 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/12 16:05:39 by stde-alm         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:52:19 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,15 @@ void	*ft_memset(void *s, int c, size_t n);
 void	*ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t s);
 void	*ft_memmove(void *dest, const void *src, size_t s);
+size_t	ft_strlcat(char *dst, const char *src, size_t s);
+size_t	ft_strlcpy(char *dst, const char *src, size_t sdst);
+int		ft_toupper(int car);
+int		ft_tolower(int car);
+char	*ft_strchr(const char *str, int car);
+char	*ft_strrchr(const char *str, int car);
+int		ft_strncmp(char *s1, char *s2, size_t n);
+void	*ft_memchr(const void *str, int car, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t i);
+char	*ft_strnstr( const char *s1, const char *s2, size_t l);
 
 #endif

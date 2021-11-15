@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 00:04:20 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/15 15:21:19 by stde-alm         ###   ########.fr       */
+/*   Created: 2021/11/15 14:07:59 by stde-alm          #+#    #+#             */
+/*   Updated: 2021/11/15 15:36:34 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t s)
+void	*ft_memchr(const void *str, int car, size_t n)
 {
-	size_t	i;
-	size_t	j;
+	unsigned char	*m_str;
+	unsigned char	m_car;
 
-	i = 0;
-	j = ft_strlen (dst);
-	if (j >= s)
-		return (ft_strlen(src) + s);
-	while (src[i] && j + i < s - 1)
+	m_str = (unsigned char *) str;
+	m_car = (unsigned char) car;
+	while (n--)
 	{
-		dst[j + i] = src[i];
-		i++;
+		if (*m_str == m_car)
+			return ((void *) m_str);
+		m_str++;
 	}
-	dst[j + i] = '\0';
-	return (ft_strlen(dst) + ft_strlen(&src[i]));
+	return (NULL);
 }
