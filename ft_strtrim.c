@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/18 13:36:01 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/18 18:03:41 by stde-alm         ###   ########.fr       */
+/*   Created: 2021/11/18 18:06:23 by stde-alm          #+#    #+#             */
+/*   Updated: 2021/11/18 18:42:02 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
-void	*ft_calloc(size_t l_count, size_t l_size)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	void	*ret;
+	char	*rte;
 
-	ret = malloc((l_count * l_size));
-	if (!ret)
+	if (!s1 || !set)
 		return (0);
-	ft_bzero(ret, (l_count * l_size));
-	return (ret);
+	
+}
+
+int ft_cherchecar(char const *s1, char const *set)
+{
+	int	i;
+
+	i = 0;
+	while(set[i])
+	{
+		if (s1 == set[i])
+			return (1);
+		i++;
+	}
 }

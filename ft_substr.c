@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/18 13:36:01 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/18 18:03:41 by stde-alm         ###   ########.fr       */
+/*   Created: 2021/11/18 16:12:44 by stde-alm          #+#    #+#             */
+/*   Updated: 2021/11/18 17:19:44 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
-void	*ft_calloc(size_t l_count, size_t l_size)
+char	*ft_substr(char const *src, unsigned int start, size_t len)
 {
-	void	*ret;
+	char	*dst;
 
-	ret = malloc((l_count * l_size));
-	if (!ret)
+	if (!src || !len)
 		return (0);
-	ft_bzero(ret, (l_count * l_size));
-	return (ret);
+	dst = malloc(len + 1);
+	if (!dst)
+		return (NULL);
+	if (start >= ft_strlen(src))
+		*dst = '\0';
+	else
+		ft_strlcpy(dst, (src + start), (len + 1));
+	return (dst);
 }
