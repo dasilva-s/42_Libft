@@ -6,7 +6,7 @@
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:20:55 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/15 16:52:19 by stde-alm         ###   ########.fr       */
+/*   Updated: 2021/11/18 15:09:55 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,8 @@ int		ft_strncmp(char *s1, char *s2, size_t n);
 void	*ft_memchr(const void *str, int car, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t i);
 char	*ft_strnstr( const char *s1, const char *s2, size_t l);
+int		ft_atoi(char *str);
+void	*ft_calloc(size_t l_count, size_t l_size);
+char	*strdup(const char *src);
 
 #endif

@@ -17,10 +17,10 @@
  strncmp 
  memchr 
  memcmp 
-• strnstr 
-• atoi
+ strnstr 
+ atoi
 
-• calloc 
-• strdup
+ calloc 
+ strdup
 
 ++
