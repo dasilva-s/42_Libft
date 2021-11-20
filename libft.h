@@ -6,7 +6,7 @@
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:20:55 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/18 17:48:36 by stde-alm         ###   ########.fr       */
+/*   Updated: 2021/11/20 14:17:05 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ void	*ft_calloc(size_t l_count, size_t l_size);
 char	*strdup(const char *src);
 char	*ft_substr(char const *src, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
