@@ -6,7 +6,7 @@
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:04:34 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/18 15:16:18 by stde-alm         ###   ########.fr       */
+/*   Updated: 2021/11/23 19:21:31 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 char	*ft_strdup(const char *src)
 {
-	int		l;
+	size_t	l;
 	char	*rte;
 
 	l = ft_strlen(src) + 1;
-	rte = malloc(l);
+	rte = malloc(l * sizeof(char));
 	if (!rte)
 		return (0);
 	ft_strlcpy(rte, src, l);
