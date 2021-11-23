@@ -6,14 +6,13 @@
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 11:54:37 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/18 15:12:53 by stde-alm         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:18:36 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int			ft_atoi(char *str);
-static int	ft_spc(char *strr);
 
 static int	ft_spc(char *strr)
 {

@@ -6,7 +6,7 @@
 #    By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/12 12:00:59 by stde-alm          #+#    #+#              #
-#    Updated: 2021/11/20 14:17:58 by stde-alm         ###   ########.fr        #
+#    Updated: 2021/11/23 14:06:22 by stde-alm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRCS	= ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 			ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c\
 			ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c\
 			ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c\
-			ft_strtrim.c 
+			ft_strtrim.c ft_split.c 
 			
 BONUS	=
 
