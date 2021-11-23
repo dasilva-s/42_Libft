@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   test_strchr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 11:39:35 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/23 18:36:06 by stde-alm         ###   ########.fr       */
+/*   Created: 2021/11/23 17:43:13 by stde-alm          #+#    #+#             */
+/*   Updated: 2021/11/23 17:46:51 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include"../libft.h"
+#include"../ft_strchr.c"
+#include"../ft_strrchr.c"
 
-char	*ft_strrchr(const char *str, int car)
+int	main(void)
 {
-	int		i;
-	char	c;
-
-	c = (char) car;
-	i = ft_strlen (str);
-	while (i >= 0)
-	{
-		if (str[i] == c)
-			return (&((char *) str)[i]);
-		i--;
-	}
-	return (NULL);
+	char	s[15] = "tripouille";
+	
+	
 }
