@@ -6,7 +6,7 @@
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 23:17:24 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/25 23:40:40 by stde-alm         ###   ########.fr       */
+/*   Updated: 2021/11/26 17:31:35 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	i = 0;
-	l = ft_strlen(s);
 	if (!s)
 		return (0);
+	l = ft_strlen(s);
 	str = malloc((l + 1) * sizeof(char));
-	while (str[i])
+	if (str == NULL)
+		return (NULL);
+	while (s[i])
 	{
 		str[i] = f(i, s[i]);
 		i++;

@@ -6,7 +6,7 @@
 #    By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/12 12:00:59 by stde-alm          #+#    #+#              #
-#    Updated: 2021/11/23 14:06:22 by stde-alm         ###   ########.fr        #
+#    Updated: 2021/11/26 17:54:48 by stde-alm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ RM		= rm -f
 ${NAME} :	${OBJS}
 #			${CC} -o ${NAME} ${OBJS}
 			${CCLIB} ${NAME} ${OBJS}
-			ranlib ${NAME}
+#			ranlib ${NAME}
 
 all:		${NAME}
 
