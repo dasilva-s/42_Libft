@@ -6,7 +6,7 @@
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 16:22:23 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/24 23:49:51 by stde-alm         ###   ########.fr       */
+/*   Updated: 2021/11/26 16:59:04 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(void)
 	int		n;
 	char	*strnb;
 
-	n = -0;
+	n = -2147483647 -1;
 	strnb = ft_itoa(n);
 	printf("%d = %s\n", n, strnb);
 	free(strnb);
