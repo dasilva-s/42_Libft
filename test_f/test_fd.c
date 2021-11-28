@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_itoa.c                                        :+:      :+:    :+:   */
+/*   test_fd.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 16:22:23 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/26 16:59:04 by stde-alm         ###   ########.fr       */
+/*   Created: 2021/11/28 17:17:27 by stde-alm          #+#    #+#             */
+/*   Updated: 2021/11/28 17:45:39 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../libft.h"
-#include"../ft_itoa.c"
-#include"../ft_calloc.c"
-#include"../ft_bzero.c"
-#include"../ft_memmove.c"
+#include"../ft_putchar_fd.c"
 
 int	main(void)
 {
-	int		n;
-	char	*strnb;
+	FILE*	fichier;
 
-	n = -2147483647 - 1;
-	strnb = ft_itoa(n);
-	printf("%d = %s\n", n, strnb);
-	free(strnb);
-	return (0);
+	fichier = fopen("test.txt", "w+");
+	if (fichier == NULL)
+		return (0);
+	ft_putchar_fd('w', fichier);
 }
