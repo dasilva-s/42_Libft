@@ -6,13 +6,13 @@
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 11:54:37 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/29 20:57:29 by stde-alm         ###   ########.fr       */
+/*   Updated: 2021/11/29 18:02:07 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_spc(const char *strr)
+static int	ft_spc(char *strr)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ static int	ft_spc(const char *strr)
 	return (i);
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(char *str)
 {
 	int			i;
 	long int	nb;
@@ -34,7 +34,7 @@ int	ft_atoi(const char *str)
 	nb = 0;
 	neg = 0;
 	i = (ft_spc(str));
-	if (str[i] == '-' || str[i] == '+')
+	while (str[i] && (str[i] == '-' || str[i] == '+'))
 	{
 		if (str[i] == '-')
 			neg++;
@@ -42,14 +42,11 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
-		if (nb > 2147483647 && (neg % 2) == 0)
-			return (-1);
-		else if (nb > 2147483648 && (neg % 2) == 1)
-			return (1);
 		nb = nb * 10 + (str[i] - '0');
 		i++;
 	}
-	if ((neg % 2) != 0)
-		nb = nb * -1;
-	return (((int)nb));
+	if ((neg % 2) == 0)
+		return ((int) nb);
+	else
+		return (((int)nb) * -1);
 }

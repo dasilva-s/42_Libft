@@ -6,7 +6,7 @@
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:20:55 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/29 16:52:00 by stde-alm         ###   ########.fr       */
+/*   Updated: 2021/11/29 20:56:49 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include<stdlib.h>
 # include<unistd.h>
 # include<string.h>
+# include<limits.h>
 
 int		ft_isalpha(int car);
 int		ft_isdigit(int car);
@@ -33,11 +34,11 @@ int		ft_toupper(int car);
 int		ft_tolower(int car);
 char	*ft_strchr(const char *str, int car);
 char	*ft_strrchr(const char *str, int car);
-int		ft_strncmp(char *s1, char *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *str, int car, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t i);
 char	*ft_strnstr( const char *s1, const char *s2, size_t l);
-int		ft_atoi(char *str);
+int		ft_atoi(const char *str);
 void	*ft_calloc(size_t l_count, size_t l_size);
 char	*ft_strdup(const char *src);
 char	*ft_substr(char const *src, unsigned int start, size_t len);

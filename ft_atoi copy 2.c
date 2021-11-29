@@ -6,13 +6,13 @@
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 11:54:37 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/29 20:57:29 by stde-alm         ###   ########.fr       */
+/*   Updated: 2021/11/29 20:13:52 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_spc(const char *strr)
+static int	ft_spc(char *strr)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ static int	ft_spc(const char *strr)
 	return (i);
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(char *str)
 {
 	int			i;
 	long int	nb;
@@ -42,9 +42,9 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
-		if (nb > 2147483647 && (neg % 2) == 0)
+		if (nb > INT_MAX)
 			return (-1);
-		else if (nb > 2147483648 && (neg % 2) == 1)
+		else if (nb < -2147483648)
 			return (1);
 		nb = nb * 10 + (str[i] - '0');
 		i++;

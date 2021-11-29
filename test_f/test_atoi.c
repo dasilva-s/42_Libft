@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   test_atoi.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/15 19:01:58 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/29 20:55:23 by stde-alm         ###   ########.fr       */
+/*   Created: 2021/11/29 19:32:21 by stde-alm          #+#    #+#             */
+/*   Updated: 2021/11/29 20:46:01 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include"../libft.h"
+#include"../ft_atoi.c"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	main(void)
 {
-	int	i;
-
-	i = 0;
-	while ((s1[i] || s2[i]) && n > 0)
-	{
-		if (s1[i] != s2[i])
-			return (((unsigned char) s1[i] - s2[i]));
-		i++;
-		n--;
-	}
+	int ia;
+	int ift;
+	char nb[] = "3147483649";
+	int max = INT_MAX;
+	int min = INT_MIN;
+	
+	ia = atoi(nb);
+	ift = ft_atoi(nb);
+	
+	printf("\nft_atoi = %d\n", ift);
+	printf("atoi = %d\n", ia);
+	printf("char = %s\n\n", nb);
+	printf("max = %d\n", max);
+	printf("min = %d\n", min);
 	return (0);
 }
