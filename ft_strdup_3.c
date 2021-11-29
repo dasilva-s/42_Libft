@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 16:14:16 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/29 16:24:07 by stde-alm         ###   ########.fr       */
+/*   Created: 2021/11/29 16:41:46 by stde-alm          #+#    #+#             */
+/*   Updated: 2021/11/29 16:43:43 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *src, unsigned int start, size_t len)
+char	*ft_strdup(const char *src)
 {
 	size_t		i;
 	char		*dest;
 
 	i = 0;
-	if (!src)
-		return (NULL);
-	if (len > (size_t) ft_strlen(src))
-		len = (size_t)ft_strlen(src);
-	dest = ft_calloc(len + 1, sizeof(*dest));
+	dest = (char *)malloc (sizeof(*dest) * ft_strlen(src) + 1);
 	if (!dest)
-		return (NULL);
-	if (start < ft_strlen(src))
+		return (0);
+	while (*src)
 	{
-		while (dest[i] || i < len)
-		{
-			dest[i] = src[start];
-			i++;
-			start++;
-		}
+		dest[i] = *src;
+		i++;
+		src++;
 	}
 	dest[i] = '\0';
 	return (dest);

@@ -6,7 +6,7 @@
 /*   By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:20:55 by stde-alm          #+#    #+#             */
-/*   Updated: 2021/11/23 14:06:00 by stde-alm         ###   ########.fr       */
+/*   Updated: 2021/11/29 16:52:00 by stde-alm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t i);
 char	*ft_strnstr( const char *s1, const char *s2, size_t l);
 int		ft_atoi(char *str);
 void	*ft_calloc(size_t l_count, size_t l_size);
-char	*strdup(const char *src);
+char	*ft_strdup(const char *src);
 char	*ft_substr(char const *src, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
