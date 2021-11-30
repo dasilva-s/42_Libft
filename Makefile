@@ -6,7 +6,7 @@
 #    By: stde-alm <marvin@42lausanne.ch>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/12 12:00:59 by stde-alm          #+#    #+#              #
-#    Updated: 2021/11/26 17:54:48 by stde-alm         ###   ########.fr        #
+#    Updated: 2021/11/30 10:59:18 by stde-alm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,20 +32,24 @@ CC		= gcc
 
 CCLIB	= ar rc
 
+NORM	= norminette
+
 CFLAGS	= -Wall -Wextra -Werror
+
+NFLAGS	= -RCheckForbiddenSourceHeader -RCheckDefine
 
 RM		= rm -f
 
 ${NAME} :	${OBJS}
 #			${CC} -o ${NAME} ${OBJS}
 			${CCLIB} ${NAME} ${OBJS}
-#			ranlib ${NAME}
+			ranlib ${NAME}
 
 all:		${NAME}
 
-norm:		
-			norminette ${SRCS}
-			norminette -RCheckDefine ${HEADER}
+normi:		fclean
+			${NORM} ${NFLAGS} ${SRCS}
+			${NORM} ${NFLAGS} ${HEADER}
 
 bonus:		${OBJS} ${BONUS_OBJS}
 			${CCLIB} ${NAME} ${SRCS} ${bonus_OBJS}
@@ -58,4 +62,4 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY:		all clean fclean re norm bonus
+.PHONY:		all clean fclean re normi bonus
